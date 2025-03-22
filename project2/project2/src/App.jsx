@@ -1,11 +1,12 @@
 import './App.css'
-import NavBar from "./components/navBar"
+import { LoadingScreen } from './components/LoadingScreen'
+
 function App() {
+
 
   return (
     <>
-      < NavBar/>
-      <h1>Suvadeep</h1>
+    <LoadingScreen/>
     </>
   )
 }
