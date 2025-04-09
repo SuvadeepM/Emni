@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  #head {
+    height: 100px;
+    background-color: blue;
+    padding: 50px;
+    color: white;
+  }
+  
+  #middle {
+    background-color: orange;
+    width: 200px;
+    height: 100px;
+  }
+  
+  #footer {
+    font-size: 20px;
+  }
+  
+  #b {
+    width: 20px;
+  }
+  
+  .box {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  
