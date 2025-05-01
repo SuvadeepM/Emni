@@ -31,6 +31,6 @@ function generate() {
 }
 
 button.addEventListener('click', () => {
-    const password = generate();
-    captchaDisplay.textContent = `Generated Captcha: ${password}`;
+    const captcha = generate();
+    captchaDisplay.textContent = `Generated Captcha: ${captcha}`;
 });
