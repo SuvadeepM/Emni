@@ -1,23 +1,97 @@
-Rock Paper Scissors game
-This is a game between a player and the computer, where both will make a
-random selection of either Rock, Paper, or Scissors (alternatively, you could
-create a version using real player input!). Rock will beat out Scissors, Paper
-will beat out Rock, and Scissors will beat out Paper. You can use JavaScript
-to create your own version of this game, applying the logic with an if
-statement. Since this project is a little more difficult, here are some
-suggested steps:
-1. Create an array that contains the variables Rock, Paper, and Scissors.
-2. Set up a variable that generates a random number 0-2 for the player
-and then do the same for the computer's selection. The number
-represents the index values in the array of the 3 items.
-3. Create a variable to hold a response message to the user. This can
-show the random results for the player and then also the result for the
-computer of the matching item from the array.
-4. Create a condition to handle the player and computer selections. If
-both are the same, this results in a tie.
-5. Use conditions to apply the game logic and return the correct results.
-There are several ways to do this with the condition statements, but
-you could check which player's index value is bigger and assign the
-victory accordingly, with the exception of Rock beating Scissors.
-6. Add a new output message that shows the player selection versus the
-computer selection and the result of the game.
+# Rock Paper Scissors Game (JavaScript)
+
+This project simulates a simple Rock Paper Scissors game between a player and the computer. The computer and the player will each randomly choose one of the three options: Rock, Paper, or Scissors. The game then determines the winner based on classic rules:
+
+* **Rock** beats **Scissors**
+* **Scissors** beats **Paper**
+* **Paper** beats **Rock**
+
+---
+
+## 🧠 Steps to Build:
+
+### 1. Define Game Options
+
+Create an array that holds the game choices:
+
+```javascript
+const choices = ["Rock", "Paper", "Scissors"];
+```
+
+### 2. Generate Random Selections
+
+Generate random indices for both the player and the computer:
+
+```javascript
+const playerIndex = Math.floor(Math.random() * 3);
+const computerIndex = Math.floor(Math.random() * 3);
+
+const playerChoice = choices[playerIndex];
+const computerChoice = choices[computerIndex];
+```
+
+### 3. Display Selections
+
+Create a message that shows both choices:
+
+```javascript
+let message = `Player chose ${playerChoice} | Computer chose ${computerChoice}. `;
+```
+
+### 4. Handle Tie Case
+
+Check if both selections are the same:
+
+```javascript
+if (playerChoice === computerChoice) {
+  message += "It's a tie!";
+```
+
+### 5. Apply Game Logic
+
+Use conditionals to determine the winner:
+
+```javascript
+} else if (
+  (playerChoice === "Rock" && computerChoice === "Scissors") ||
+  (playerChoice === "Paper" && computerChoice === "Rock") ||
+  (playerChoice === "Scissors" && computerChoice === "Paper")
+) {
+  message += "Player wins!";
+} else {
+  message += "Computer wins!";
+}
+```
+
+### 6. Display the Result
+
+Output the final result to the console:
+
+```javascript
+console.log(message);
+```
+
+---
+
+## 💪 Example Output:
+
+```
+Player chose Paper | Computer chose Rock. Player wins!
+```
+
+---
+
+## ✅ Features:
+
+* Fully randomized computer and player choices
+* Follows standard game rules
+* Clear and readable output
+* Easy to extend with real user input (e.g., using `prompt()` in the browser)
+
+---
+
+## 📌 Optional Enhancements:
+
+* Replace the random player selection with user input via `prompt()`
+* Add rounds and scoring
+* Build a simple UI with HTML/CSS
