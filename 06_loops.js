@@ -97,3 +97,17 @@ for (const key in myObj) {
     console.log(`${key}: ${myObj[key]}`);
 }
 
+// Map
+
+const map = new Map()
+map.set('IN', "India")
+map.set('USA', "United States of America")
+map.set('Fr', "France")
+map.set('IN', "India")
+
+
+// console.log(map.get('IN'));
+// console.log(map);
+map.set('CHI', 'China')
+console.log(map);
+
