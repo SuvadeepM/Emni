@@ -114,6 +114,21 @@ Boolean([]);       // true
 | `false`       | Falsy           |
 | `true`        | Truthy          |
 
+## Example
+```Javascript
+const emptyObj = {}
+
+// if (Object.keys(emptyObj) === 0) { // this will return [], which is a truthy value. So, [] === 0 is false as 0 is falsy and the code will not run
+//     console.log("Object is empty");
+// }else {
+//     console.log("it is there");
+// }
+
+if (Object.keys(emptyObj).length === 0) {
+    console.log("Object is empty");
+}
+```
+
 ---
 
 ## 📌 Tips
