@@ -1,0 +1,44 @@
+<!-- async code -->
+
+<!-- 
+
+Async Functions
+The async keyword is used to declare an asynchronous function. An async function:
+=> Always returns a Promise.
+=> Allows the use of the await keyword inside its body.
+=> Can be used anywhere a normal function can be used.
+
+Await Keyword
+The await keyword is used inside an async function to pause the execution of the function until a Promise is resolved or rejected.
+
+=> It can only be used inside an async function or at the top level of a module. 
+=> It waits for the Promise to settle (resolve or reject). 
+=> When a promise is resolved, await returns the resolved value.
+=> If a promise is rejected, await throws an error that can be caught with a try/catch block. 
+
+
+setTimeout
+setInterval
+Promise: an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+A Promise can be in one of three states:
+=>Pending: The initial state, indicating that the asynchronous operation is still in progress.
+=>Fulfilled (Resolved): The operation completed successfully, and the Promise holds the resulting value.
+=>Rejected: The operation failed, and the Promise holds an error object.
+
+Promises provide methods for handling these outcomes:
+.then(onFulfilled, onRejected): Attaches callbacks to be executed when the Promise is either fulfilled or rejected.
+.catch(onRejected): A shorthand for .then(null, onRejected), specifically for handling rejections.
+.finally(onFinally): Attaches a callback that will be executed regardless of whether the Promise is fulfilled or rejected.
+
+Key concepts:
+=>Chaining: Promises can be chained together using .then() to create a sequence of asynchronous operations.
+=>Error Handling: Rejections are propagated down the chain, allowing for centralized error handling using .catch().
+=>async/await: A more modern syntax built on top of Promises, making asynchronous code appear more synchronous and easier to read.
+
+Promises provide a structured way to manage asynchronous code, improving code readability and maintainability.
+
+fetch(): 
+
+
+-->

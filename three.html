@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suvadeep Document</title>
+</head>
+<body>
+    <h1>Suvadeep</h1>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    const saySuvadeep = function(){
+        console.log("Suvadeep");
+    }
+    saySuvadeep()
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "basic JS series"
+    }
+
+    const changeMe = setTimeout(changeText, 2000)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
+
+    // setTimeout() is used to delay the execution of a function by a specified amount of milliseconds.
+    // clearTimeout() is used to cancel a timeout that was previously set using setTimeout().
+    // setInterval() repeatedly runs a function every set number of milliseconds (until stopped).
+    // clearInterval() stops a function that was scheduled with setInterval().
+</script>
+
+</html>
